@@ -4,6 +4,7 @@ EXPOSE 8080
 
 COPY . /app
 
+RUN cd app
 RUN ls -a
 # RUN ["cd", "./app"]
 # RUN ["./mvnw", "clean", "install"]
