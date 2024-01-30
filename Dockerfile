@@ -7,13 +7,8 @@ COPY . /app
 RUN apt-get install maven -y
 RUN cd app && mvn clean install
 
-RUN ls -a app
+EXPOSE 8080
 
-# FROM openjdk:21-jdk-slim
+COPY --from=build /app/taget/swagger_docs-1.0.0.war /app/app.war
 
-
-# EXPOSE 8080
-
-# COPY --from=build /taget/swagger_docs-1.0.0.war app.war
-
-# ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT [ "java", "-jar", "app/", "app.jar" ]
