@@ -4,6 +4,7 @@ EXPOSE 8080
 
 COPY . /app
 # COPY /taget/swagger_docs-1.0.0.jar app.jar
-RUN ["cd", "app", "./mvnw", "clean", "install"]
-RUN ls -a /app
+RUN ["cd", "app"]
+RUN ls -a
+# RUN ["./mvnw", "clean", "install"]
 # ENTRYPOINT [ "java", "-jar", "app.jar" ]
