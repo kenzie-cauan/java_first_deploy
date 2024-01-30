@@ -5,9 +5,9 @@ RUN apt-get install openjdk-21-jdk -y
 COPY . /app
 
 RUN apt-get install maven -y
-RUN mvn clean install
+RUN cd app && mvn clean install
 
-RUN ls -a
+RUN ls -a app
 
 # FROM openjdk:21-jdk-slim
 
