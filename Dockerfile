@@ -1,7 +1,8 @@
-FROM ubuntu:latest AS build
+FROM maven:3-openjdk-18-slim AS build
 
-RUN apt-get update
-RUN apt-get install openjdk-21-jdk -y
+# RUN apt-get update
+# RUN apt-get install openjdk-21-jdk -y
+
 COPY . .
 
 RUN apt-get install maven -y
