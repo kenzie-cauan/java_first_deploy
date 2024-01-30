@@ -1,4 +1,4 @@
-FROM maven:3-openjdk-18-slim AS build
+FROM maven:3.9-eclipse-temurin-21-alpine AS build
 
 # RUN apt-get update
 # RUN apt-get install openjdk-21-jdk -y
