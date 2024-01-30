@@ -12,7 +12,7 @@
 	<groupId>br.com.kenzie</groupId>
 	<artifactId>swagger_docs</artifactId>
 	<version>1.0.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>swagger_docs</name>
 	<description>Gerando Documentação com Swagger</description>
 	<properties>

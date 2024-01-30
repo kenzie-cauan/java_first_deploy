@@ -11,6 +11,6 @@ FROM openjdk:21-jdk-slim
 
 EXPOSE 8080
 
-COPY --from=build /taget/swagger_docs-1.0.0.war app.war
+COPY --from=build /taget/swagger_docs-1.0.0.jar app.jar
 
-ENTRYPOINT [ "java", "-jar", "app.war" ]
+ENTRYPOINT [ "java", "-jar", "app.jar" ]
