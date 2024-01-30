@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br.com.kenzie</groupId>
 	<artifactId>swagger_docs</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>swagger_docs</name>
 	<description>Gerando Documentação com Swagger</description>
