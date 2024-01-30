@@ -1,14 +1,18 @@
-FROM openjdk:21-jdk-slim
+FROM ubuntu:latest AS build
 
-EXPOSE 8080
-
+RUN apt-get update
+RUN apt-get install openjdk-21 -y
 COPY . /app
 
-RUN cd app && mvnw -help
-# RUN ls -a app
-# RUN ["cd", "./app"]
-# RUN ["./mvnw", "clean", "install"]
+RUN apt-get install maven -y
+RUN mvn clean install
 
-# COPY /taget/swagger_docs-1.0.0.jar app.jar
+FROM openjdk:21-jdk-slim
+
+RUN ls -a
+
+# EXPOSE 8080
+
+# COPY --from=build /taget/swagger_docs-1.0.0.war app.war
 
 # ENTRYPOINT [ "java", "-jar", "app.jar" ]
