@@ -9,6 +9,4 @@ RUN cd app && mvn clean install
 
 EXPOSE 8080
 
-COPY --from=build /app/taget/swagger_docs-1.0.0.war /app/app.war
-
 ENTRYPOINT [ "java", "-jar", "app/", "app.jar" ]
