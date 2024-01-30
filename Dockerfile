@@ -9,4 +9,6 @@ RUN cd app && mvn clean install
 
 EXPOSE 8080
 
+RUN ls -la
+
 ENTRYPOINT [ "java", "-jar", "/app/app.jar"]
