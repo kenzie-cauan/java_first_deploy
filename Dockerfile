@@ -1,4 +1,4 @@
-FROM ubuntu:latest AS build
+FROM ubuntu:latest
 
 RUN apt-get update
 RUN apt-get install openjdk-21-jdk -y
@@ -9,4 +9,4 @@ RUN cd app && mvn clean install
 
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "-jar", "app/", "app.jar" ]
+ENTRYPOINT [ "java", "-jar", "app/app.jar"]
