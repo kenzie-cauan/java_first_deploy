@@ -5,8 +5,8 @@ EXPOSE 8080
 COPY . /app
 
 # RUN ls -a /app
-RUN "cd ./app && ./mvnw clean install"
-# RUN ["./mvnw", "clean", "install"]
+RUN ["cd", "./app"]
+RUN ["./mvnw", "clean", "install"]
 
 # COPY /taget/swagger_docs-1.0.0.jar app.jar
 
