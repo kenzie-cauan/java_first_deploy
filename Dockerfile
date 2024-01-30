@@ -1,14 +1,15 @@
 FROM ubuntu:latest AS build
 
 RUN apt-get update
-RUN apt-get install openjdk-21 -y
+RUN apt-get install openjdk-21-jdk -y
 COPY . /app
 
 RUN apt-get install maven -y
 RUN mvn clean install
 
 RUN ls -a
-FROM openjdk:21-jdk-slim
+
+# FROM openjdk:21-jdk-slim
 
 
 # EXPOSE 8080
