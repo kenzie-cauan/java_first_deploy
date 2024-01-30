@@ -9,4 +9,4 @@ RUN cd app && mvn clean install
 
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "-jar", "app/app.jar"]
+ENTRYPOINT [ "java", "-jar", "/app/app.jar"]
